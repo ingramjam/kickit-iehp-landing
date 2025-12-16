@@ -85,6 +85,19 @@
             position: sticky;
             top: 0;
             z-index: 100;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.15;
+            z-index: -1;
         }
         
         .header-flex {
@@ -286,6 +299,9 @@
 <body>
 
     <header>
+        <video class="header-video" autoplay muted loop playsinline>
+            <source src="https://131650.fs1.hubspotusercontent-na2.net/hubfs/131650/phone3.mp4" type="video/mp4">
+        </video>
         <div class="container header-flex">
             <a href="#" class="brand-logo">Kick It California</a>
             
