@@ -210,6 +210,35 @@
             margin-top: 3rem;
         }
         
+        .step-grid-scroll {
+            display: flex;
+            gap: 2rem;
+            margin-top: 3rem;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            padding-bottom: 1rem;
+        }
+        
+        .step-grid-scroll::-webkit-scrollbar {
+            height: 8px;
+        }
+        
+        .step-grid-scroll::-webkit-scrollbar-track {
+            background: var(--light-gray);
+            border-radius: 4px;
+        }
+        
+        .step-grid-scroll::-webkit-scrollbar-thumb {
+            background: var(--kic-teal);
+            border-radius: 4px;
+        }
+        
+        .step-grid-scroll .step-card {
+            flex: 0 0 250px;
+            scroll-snap-align: start;
+        }
+        
         .step-card {
             background: var(--white);
             padding: 2.25rem 1.75rem;
@@ -378,8 +407,21 @@
             }
             
             .step-grid {
-                grid-template-columns: 1fr;
+                display: flex;
                 gap: 1rem;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+                padding-bottom: 1rem;
+                margin-left: -1rem;
+                margin-right: -1rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            
+            .step-grid .step-card {
+                flex: 0 0 280px;
+                scroll-snap-align: start;
             }
             
             .step-card {
@@ -488,12 +530,6 @@
                 <a href="https://kickitca.org/what-to-expect" target="_blank" style="color: var(--kic-teal); text-decoration: underline; font-weight: 600;">Learn more at kickitca.org/what-to-expect</a>
             </p>
             
-            <div style="max-width: 650px; margin: 0 auto 3rem auto; padding: 2rem; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-radius: 12px; text-align: center; border: 2px solid var(--kic-teal);">
-                <h3 style="font-size: 1.4rem; margin-bottom: 1rem; color: var(--iehp-navy);">📹 Quit Vids</h3>
-                <p style="margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.7;">Watch short videos to learn simple yet practical tips for planning, staying motivated, and handling cravings.</p>
-                <a href="https://kickitca.org/quit-vids" target="_blank" class="btn" style="display: inline-block;">Watch Now</a>
-            </div>
-            
             <div class="step-grid">
                 <div class="step-card">
                     <span class="step-icon">📞</span>
@@ -511,7 +547,7 @@
                     Create a plan at your own pace.
                 </div>
                 <div class="step-card">
-                    <span class="step-icon">�</span>
+                    <span class="step-icon">📞</span>
                     <span class="step-title">Ongoing Support</span>
                     Regular check-in calls to help you stay on track.
                 </div>
@@ -519,6 +555,13 @@
                     <span class="step-icon">💰</span>
                     <span class="step-title">No Cost</span>
                     All services are available at no cost.
+                </div>
+                <div class="step-card">
+                    <a href="https://kickitca.org/quit-vids" target="_blank" style="text-decoration: none; color: inherit; display: block; height: 100%;">
+                        <span class="step-icon">📹</span>
+                        <span class="step-title">Quit Vids</span>
+                        Watch short videos for tips on planning, staying motivated, and handling cravings.
+                    </a>
                 </div>
             </div>
         </div>
