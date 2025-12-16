@@ -1,0 +1,133 @@
+.offerings-section {
+    padding: 4rem 0;
+    background: #ffffff;
+}
+
+.offerings-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.offerings-section h2 {
+    font-size: 1.875rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    color: #1a2a3a;
+}
+
+.offerings-subtitle {
+    text-align: center;
+    margin-bottom: 3rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.15rem;
+}
+
+.step-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.step-card {
+    background: #ffffff;
+    padding: 2.25rem 1.75rem;
+    border-radius: 12px;
+    text-align: center;
+    border: 2px solid #f4f7f9;
+    border-top: 5px solid #00a7e1;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    transition: all 0.3s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    border-top-color: #005696;
+}
+
+.step-card-special {
+    background: linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 100%);
+    border-top-color: #005696;
+}
+
+.step-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+    line-height: 1;
+}
+
+.step-title {
+    font-weight: 800;
+    display: block;
+    margin-bottom: 0.75rem;
+    font-size: 1.2rem;
+    color: #005696;
+}
+
+.step-description {
+    margin: 0 0 0.75rem 0;
+    font-size: 0.95rem;
+}
+
+.step-link {
+    color: #005696;
+    text-decoration: underline;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.step-link:hover {
+    color: #004578;
+}
+
+.highlight {
+    background: #FFD700;
+    padding: 0.1em 0.5em;
+    display: inline-block;
+    line-height: 1.3;
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    .offerings-section {
+        padding: 3rem 0;
+    }
+
+    .offerings-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .step-grid {
+        display: flex;
+        gap: 1rem;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 1rem;
+        margin-left: -1rem;
+        margin-right: -1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .step-grid .step-card {
+        flex: 0 0 280px;
+        scroll-snap-align: start;
+        padding: 1.5rem 1rem;
+    }
+
+    .step-icon {
+        font-size: 2rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .step-title {
+        font-size: 1.1rem;
+    }
+}

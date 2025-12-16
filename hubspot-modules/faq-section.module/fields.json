@@ -1,0 +1,90 @@
+[
+  {
+    "name": "heading_text",
+    "label": "Heading Text",
+    "required": true,
+    "locked": false,
+    "type": "text",
+    "default": "Common"
+  },
+  {
+    "name": "highlight_text",
+    "label": "Highlighted Text (yellow background)",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Questions"
+  },
+  {
+    "name": "faqs",
+    "label": "FAQ Items",
+    "required": false,
+    "locked": false,
+    "type": "group",
+    "children": [
+      {
+        "name": "question",
+        "label": "Question",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "answer",
+        "label": "Answer",
+        "type": "richtext",
+        "default": ""
+      }
+    ],
+    "default": [
+      {
+        "question": "Is this really free?",
+        "answer": "Yes. All services are free for IEHP members."
+      },
+      {
+        "question": "Do I have to be ready to quit?",
+        "answer": "No. We meet you where you are."
+      },
+      {
+        "question": "What products do you offer?",
+        "answer": "Free nicotine patches may be available if medically appropriate."
+      },
+      {
+        "question": "Is my information private?",
+        "answer": "Yes. Your information is kept confidential."
+      },
+      {
+        "question": "Can I quit vaping too?",
+        "answer": "Yes. Kick It California helps with both smoking and vaping."
+      }
+    ],
+    "occurrence": {
+      "min": 1,
+      "max": 20,
+      "default": 5
+    }
+  },
+  {
+    "name": "show_cta",
+    "label": "Show CTA Button",
+    "required": false,
+    "locked": false,
+    "type": "boolean",
+    "default": true
+  },
+  {
+    "name": "cta_text",
+    "label": "CTA Button Text",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Sign Up for Free Quit Support"
+  },
+  {
+    "name": "cta_url",
+    "label": "CTA Button URL",
+    "required": false,
+    "locked": false,
+    "type": "url",
+    "default": "https://kickitca.org/form/intake/self/1?srcCode=IEHP"
+  }
+]

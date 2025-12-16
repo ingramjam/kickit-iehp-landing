@@ -1,0 +1,31 @@
+<!-- Hero Section with Video Background -->
+<section class="hero-section">
+    <video class="hero-video" autoplay muted loop playsinline>
+        <source src="{{ module.video_url }}" type="video/mp4">
+    </video>
+    <div class="hero-container">
+        <h1>{{ module.headline }}{% if module.highlight_text %} <span class="highlight">{{ module.highlight_text }}</span>{% endif %}</h1>
+        
+        {% if module.tagline %}
+        <p class="hero-tagline"><strong>{{ module.tagline }}</strong></p>
+        {% endif %}
+        
+        {% if module.subheadline %}
+        <p class="hero-subheadline">{{ module.subheadline }}</p>
+        {% endif %}
+        
+        {% if module.benefits %}
+        <ul class="hero-benefits">
+            {% for item in module.benefits %}
+            <li>{{ item.benefit_text }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+
+        <a href="{{ module.cta_url }}" class="btn">{{ module.cta_text }}</a>
+        
+        {% if module.disclaimer_text %}
+        <p class="subtext">{{ module.disclaimer_text }}</p>
+        {% endif %}
+    </div>
+</section>

@@ -1,0 +1,21 @@
+<!-- FAQ Section -->
+<section class="faq-section">
+    <div class="faq-container">
+        <h2>{{ module.heading_text }}{% if module.highlight_text %} <span class="highlight">{{ module.highlight_text }}</span>{% endif %}</h2>
+        
+        {% for item in module.faqs %}
+        <details class="faq-item">
+            <summary>{{ item.question }}</summary>
+            <div class="faq-content">
+                {{ item.answer }}
+            </div>
+        </details>
+        {% endfor %}
+        
+        {% if module.show_cta %}
+        <div class="faq-cta-wrapper">
+            <a href="{{ module.cta_url }}" class="btn">{{ module.cta_text }}</a>
+        </div>
+        {% endif %}
+    </div>
+</section>

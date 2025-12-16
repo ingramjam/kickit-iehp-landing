@@ -1,0 +1,14 @@
+{
+  "label": "FAQ Accordion Section",
+  "icon": "../../icons/list.svg",
+  "css_assets": [],
+  "external_js": [],
+  "global": false,
+  "help_text": "Collapsible FAQ section with questions and answers",
+  "host_template_types": ["PAGE"],
+  "js_assets": [],
+  "other_assets": [],
+  "smart_type": "NOT_SMART",
+  "tags": [],
+  "is_available_for_new_content": true
+}

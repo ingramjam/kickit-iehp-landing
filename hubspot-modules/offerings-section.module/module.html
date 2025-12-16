@@ -1,0 +1,27 @@
+<!-- What Kick It Offers Section -->
+<section class="offerings-section">
+    <div class="offerings-container">
+        <h2>{{ module.heading_text }}{% if module.highlight_text %} <span class="highlight">{{ module.highlight_text }}</span>{% endif %}</h2>
+        
+        {% if module.subtitle %}
+        <p class="offerings-subtitle">{{ module.subtitle }}</p>
+        {% endif %}
+        
+        <div class="step-grid">
+            {% for item in module.offerings %}
+            <div class="step-card{% if item.special_styling %} step-card-special{% endif %}">
+                {% if item.is_link %}
+                <span class="step-icon">{{ item.icon }}</span>
+                <span class="step-title">{{ item.title }}</span>
+                <p class="step-description">{{ item.description }}</p>
+                <a href="{{ item.link_url }}" target="_blank" class="step-link">{{ item.link_text }} →</a>
+                {% else %}
+                <span class="step-icon">{{ item.icon }}</span>
+                <span class="step-title">{{ item.title }}</span>
+                {{ item.description }}
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

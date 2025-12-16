@@ -1,0 +1,132 @@
+/* Global Styles for Kick It California + IEHP Landing Page */
+/* Add this to your HubSpot theme's global CSS or page-specific CSS */
+
+/* === CSS VARIABLES === */
+:root {
+    /* KIC Brand Colors */
+    --kic-blue: #005696; 
+    --kic-teal: #00a7e1; 
+    
+    /* IEHP Brand Colors */
+    --iehp-yellow: #FFD700;
+    --iehp-navy: #1a2a3a;
+    
+    /* CTA / Action Colors */
+    --kic-accent: #ffb700; 
+    --kic-accent-hover: #e6a500;
+    
+    /* Typography & UI */
+    --text-dark: #1a2a3a;
+    --text-light: #555555;
+    --white: #ffffff;
+    --light-gray: #f4f7f9;
+    --border-color: #e0e0e0;
+    
+    /* Layout */
+    --border-radius: 8px;
+    --container-width: 800px;
+}
+
+/* === RESET & TYPOGRAPHY === */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--white);
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+    line-height: 1.25;
+    color: var(--iehp-navy);
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+h2 {
+    font-size: 1.875rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* === UTILITIES === */
+.text-center {
+    text-align: center;
+}
+
+.highlight {
+    background: var(--iehp-yellow);
+    padding: 0.1em 0.5em;
+    display: inline-block;
+    line-height: 1.3;
+}
+
+/* === GLOBAL BUTTON STYLES === */
+.btn {
+    display: inline-block;
+    background-color: var(--kic-blue);
+    color: var(--white);
+    padding: 1.1rem 2.75rem;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+    border-radius: 6px;
+    letter-spacing: 0.3px;
+    box-shadow: 0 4px 12px rgba(0, 86, 150, 0.25);
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #004578;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 86, 150, 0.35);
+    text-decoration: none;
+    color: var(--white);
+}
+
+/* === MOBILE OPTIMIZATION === */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+        padding: 0.9rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,92 @@
+[
+  {
+    "name": "video_url",
+    "label": "Video URL",
+    "required": true,
+    "locked": false,
+    "type": "url",
+    "default": "https://131650.fs1.hubspotusercontent-na2.net/hubfs/131650/phone3.mp4"
+  },
+  {
+    "name": "headline",
+    "label": "Main Headline",
+    "required": true,
+    "locked": false,
+    "type": "text",
+    "default": "Free Help to Quit Smoking or Vaping for"
+  },
+  {
+    "name": "highlight_text",
+    "label": "Highlighted Text (yellow background)",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "IEHP Members"
+  },
+  {
+    "name": "tagline",
+    "label": "Tagline (bold text below headline)",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "When it comes to keeping our community healthy, we show up with our whole hearts."
+  },
+  {
+    "name": "subheadline",
+    "label": "Subheadline",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "IEHP members can get free, confidential support through Kick It California."
+  },
+  {
+    "name": "benefits",
+    "label": "Benefits List",
+    "required": false,
+    "locked": false,
+    "type": "group",
+    "children": [
+      {
+        "name": "benefit_text",
+        "label": "Benefit",
+        "type": "text",
+        "default": ""
+      }
+    ],
+    "default": [
+      { "benefit_text": "Free one-on-one quit coaching" },
+      { "benefit_text": "Personalized quit plan" },
+      { "benefit_text": "Help managing cravings" },
+      { "benefit_text": "Free nicotine patches (if eligible)" }
+    ],
+    "occurrence": {
+      "min": 0,
+      "max": 10,
+      "default": 4
+    }
+  },
+  {
+    "name": "cta_text",
+    "label": "CTA Button Text",
+    "required": true,
+    "locked": false,
+    "type": "text",
+    "default": "Get Started Today"
+  },
+  {
+    "name": "cta_url",
+    "label": "CTA Button URL",
+    "required": true,
+    "locked": false,
+    "type": "url",
+    "default": "https://kickitca.org/form/intake/self/1?srcCode=IEHP"
+  },
+  {
+    "name": "disclaimer_text",
+    "label": "Disclaimer Text (below button)",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "All services are available at no cost."
+  }
+]

@@ -1,0 +1,128 @@
+[
+  {
+    "name": "heading_text",
+    "label": "Heading Text",
+    "required": true,
+    "locked": false,
+    "type": "text",
+    "default": "What Kick It California"
+  },
+  {
+    "name": "highlight_text",
+    "label": "Highlighted Text (yellow background)",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Offers"
+  },
+  {
+    "name": "subtitle",
+    "label": "Subtitle",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Free, proven support to help you quit smoking or vaping for good."
+  },
+  {
+    "name": "offerings",
+    "label": "Offerings/Services",
+    "required": false,
+    "locked": false,
+    "type": "group",
+    "children": [
+      {
+        "name": "icon",
+        "label": "Icon (emoji)",
+        "type": "text",
+        "default": "📞"
+      },
+      {
+        "name": "title",
+        "label": "Title",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "description",
+        "label": "Description",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "is_link",
+        "label": "Is this a linked card?",
+        "type": "boolean",
+        "default": false
+      },
+      {
+        "name": "link_url",
+        "label": "Link URL (if applicable)",
+        "type": "url",
+        "default": ""
+      },
+      {
+        "name": "link_text",
+        "label": "Link Text (if applicable)",
+        "type": "text",
+        "default": "Learn More"
+      },
+      {
+        "name": "special_styling",
+        "label": "Use special styling (blue gradient)",
+        "type": "boolean",
+        "default": false
+      }
+    ],
+    "default": [
+      {
+        "icon": "📞",
+        "title": "One-on-One Coaching",
+        "description": "Get personalized support from a trained Quit Coach.",
+        "is_link": false,
+        "special_styling": false
+      },
+      {
+        "icon": "📋",
+        "title": "Custom Quit Plan",
+        "description": "Create a plan tailored to your lifestyle and goals.",
+        "is_link": false,
+        "special_styling": false
+      },
+      {
+        "icon": "💊",
+        "title": "Free NRT",
+        "description": "Nicotine patches may be available if medically appropriate.",
+        "is_link": false,
+        "special_styling": false
+      },
+      {
+        "icon": "📞",
+        "title": "Check-In Calls",
+        "description": "Regular support to keep you motivated.",
+        "is_link": false,
+        "special_styling": false
+      },
+      {
+        "icon": "🎯",
+        "title": "Cravings Help",
+        "description": "Strategies and tools to manage urges.",
+        "is_link": false,
+        "special_styling": false
+      },
+      {
+        "icon": "📹",
+        "title": "Quit Vids",
+        "description": "Practical tips on video",
+        "is_link": true,
+        "link_url": "https://kickitca.org/quit-vids",
+        "link_text": "Watch Now",
+        "special_styling": true
+      }
+    ],
+    "occurrence": {
+      "min": 1,
+      "max": 20,
+      "default": 6
+    }
+  }
+]
