@@ -93,23 +93,25 @@
             align-items: center;
         }
         
-        /* Placeholder styling for logos until images are added */
         .brand-logo { 
-            font-weight: 900; 
-            font-size: 1.4rem; 
-            color: var(--kic-blue); 
-            text-decoration: none;
+            display: block;
+            height: 50px;
+        }
+        
+        .brand-logo img {
+            height: 100%;
+            width: auto;
         }
         
         .partner-badge {
-            font-size: 0.9rem;
-            color: var(--text-dark);
-            background: var(--light-gray);
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
             display: flex;
             align-items: center;
             gap: 0.5rem;
+        }
+        
+        .partner-logo {
+            height: 40px;
+            width: auto;
         }
 
         /* --- HERO SECTION --- */
@@ -305,11 +307,12 @@
 
     <header>
         <div class="container header-flex">
-            <a href="#" class="brand-logo">Kick It California</a>
+            <a href="https://kickitca.org" class="brand-logo" target="_blank">
+                <img src="https://www.kickitca-wp.ucsd.edu/wp-content/uploads/2021/06/Primary.png" alt="Kick It California">
+            </a>
             
             <div class="partner-badge">
-                <span>Partnered with</span>
-                <strong>IEHP</strong>
+                <img src="https://tbcdn.talentbrew.com/company/38317/v1_0/img/logo.png" alt="IEHP" class="partner-logo">
             </div>
         </div>
     </header>
