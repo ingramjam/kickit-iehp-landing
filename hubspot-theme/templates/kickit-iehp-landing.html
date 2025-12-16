@@ -1,0 +1,88 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Kick It California + IEHP Landing Page
+  screenshotPath: ../images/templates/kickit-iehp-landing.png
+-->
+<!DOCTYPE html>
+<html lang="{{ html_lang }}" {{ html_lang_dir }}>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page_meta.html_title }}</title>
+    {% if site_settings.favicon_src %}
+    <link rel="shortcut icon" href="{{ site_settings.favicon_src }}">
+    {% endif %}
+    
+    {{ require_css(get_asset_url("../../css/theme.css")) }}
+    {{ require_css(get_asset_url("../../css/landing-page.css")) }}
+    
+    {{ standard_header_includes }}
+</head>
+<body>
+    
+    <!-- Header Section -->
+    <header class="site-header">
+        <div class="header-container">
+            <div class="header-flex">
+                <!-- Kick It California Logo -->
+                <a href="https://kickitca.org" class="brand-logo" target="_blank" rel="noopener">
+                    <img src="https://www.kickitca-wp.ucsd.edu/wp-content/uploads/2021/06/Primary.png" 
+                         alt="Kick It California" 
+                         loading="lazy">
+                </a>
+                
+                <!-- IEHP Logo -->
+                <div class="partner-badge">
+                    <img src="https://tbcdn.talentbrew.com/company/38317/v1_0/img/logo.png" 
+                         alt="IEHP" 
+                         class="partner-logo" 
+                         loading="lazy">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main id="main-content">
+        {% dnd_area "dnd_area"
+            label="Main content"
+        %}
+            {% dnd_section
+                background_color={ color: '#ffffff' },
+                padding={
+                    'top': 0,
+                    'bottom': 0,
+                    'left': 0,
+                    'right': 0
+                }
+            %}
+                {% dnd_module path='@hubspot/rich_text'
+                    html='<h2 style="text-align: center;">Add your custom modules here</h2><p style="text-align: center;">Use the sidebar to add Hero Video, Offerings, and FAQ modules</p>'
+                %}
+                {% end_dnd_module %}
+            {% end_dnd_section %}
+        {% end_dnd_area %}
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-about">
+                <h4>About Kick It California</h4>
+                <p>Kick It California is a free, evidence-based tobacco cessation program that helps Californians quit smoking or vaping.</p>
+                <a href="https://kickitca.org" target="_blank" rel="noopener">Visit kickitca.org</a>
+            </div>
+            
+            <p class="footer-copyright">&copy; {{ current_year }} Kick It California. All rights reserved.</p>
+            <p class="footer-links">
+                <a href="https://kickitca.org/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>
+                <span class="separator">|</span>
+                <a href="tel:1-800-300-8086" class="footer-phone">1-800-300-8086</a>
+            </p>
+        </div>
+    </footer>
+
+    {{ standard_footer_includes }}
+</body>
+</html>

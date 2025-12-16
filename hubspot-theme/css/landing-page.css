@@ -1,0 +1,25 @@
+/* Landing Page Specific Styles */
+/* This file contains styles specific to the landing page modules */
+
+/* Ensure DND areas have no extra padding */
+.dnd-section {
+    margin: 0;
+}
+
+.dnd-row {
+    margin: 0;
+}
+
+.dnd-column {
+    padding: 0;
+}
+
+/* Remove default HubSpot spacing for full-width sections */
+body .dnd-section > .row-fluid {
+    margin: 0 !important;
+}
+
+body .dnd-section > .row-fluid > .span12 {
+    width: 100% !important;
+    margin: 0 !important;
+}
