@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Help to Quit | Kick It California & IEHP</title>
+    <style>
+        /* --- CSS VARIABLES (Easy to update for Branding) --- */
+        :root {
+            /* KIC Brand Colors */
+            --kic-blue: #005696; 
+            --kic-teal: #00a7e1; 
+            
+            /* CTA / Action Colors */
+            --kic-accent: #ffb700; 
+            --kic-accent-hover: #e6a500;
+            
+            /* Typography & UI */
+            --text-dark: #333333;
+            --text-light: #555555;
+            --white: #ffffff;
+            --light-gray: #f4f7f9;
+            --border-color: #e0e0e0;
+            
+            /* Layout */
+            --border-radius: 8px;
+            --container-width: 800px;
+        }
+
+        /* --- RESET & TYPOGRAPHY --- */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--white);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3 { line-height: 1.25; margin-bottom: 1rem; color: var(--kic-blue); }
+        h1 { font-size: 2.25rem; font-weight: 800; letter-spacing: -0.02em; }
+        h2 { font-size: 1.75rem; text-align: center; margin-bottom: 2rem; }
+        h4 { margin-bottom: 0.5rem; color: var(--white); }
+        
+        p { margin-bottom: 1rem; font-size: 1.1rem; }
+        
+        /* --- UTILITIES --- */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        .text-center { text-align: center; }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--kic-accent);
+            color: var(--text-dark);
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover { 
+            background-color: var(--kic-accent-hover);
+            transform: translateY(-2px); 
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15); 
+        }
+
+        /* --- HEADER (Dual Branding) --- */
+        header {
+            padding: 1.25rem 0;
+            border-bottom: 1px solid var(--border-color);
+            background: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        /* Placeholder styling for logos until images are added */
+        .brand-logo { 
+            font-weight: 900; 
+            font-size: 1.4rem; 
+            color: var(--kic-blue); 
+            text-decoration: none;
+        }
+        
+        .partner-badge {
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            background: var(--light-gray);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            padding: 4rem 0 3rem;
+            background: linear-gradient(135deg, var(--light-gray) 0%, #fff 100%);
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .hero-benefits {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+            display: grid;
+            gap: 1rem;
+        }
+        
+        .hero-benefits li {
+            display: flex;
+            align-items: flex-start;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+        
+        .hero-benefits li::before {
+            content: "✓";
+            color: var(--white);
+            background: var(--kic-teal);
+            font-weight: bold;
+            font-size: 0.9rem;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        
+        .subtext {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-top: 1rem;
+        }
+
+        /* --- WHAT TO EXPECT (Process) --- */
+        .process { padding: 4rem 0; }
+        
+        .step-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .step-card {
+            background: var(--white);
+            padding: 2rem 1.5rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            border: 1px solid var(--border-color);
+            border-top: 5px solid var(--kic-teal);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            transition: transform 0.2s ease;
+        }
+        
+        .step-card:hover { transform: translateY(-5px); }
+        
+        .step-icon { 
+            font-size: 2.5rem; 
+            margin-bottom: 1rem; 
+            display: block; 
+            line-height: 1;
+        }
+        
+        .step-title { 
+            font-weight: 800; 
+            display: block; 
+            margin-bottom: 0.75rem; 
+            font-size: 1.2rem;
+            color: var(--kic-blue);
+        }
+
+        /* --- FAQ (Accordion) --- */
+        .faq { padding: 4rem 0; background: var(--light-gray); }
+        
+        .faq-container { max-width: 700px; margin: 0 auto; }
+        
+        details {
+            background: var(--white);
+            margin-bottom: 1rem;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            border: 1px solid #ddd;
+        }
+        
+        summary {
+            padding: 1.25rem;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1.1rem;
+            list-style: none; /* Hides default arrow */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--kic-blue);
+        }
+        
+        summary:hover { background-color: #fafafa; }
+        
+        summary::-webkit-details-marker { display: none; } /* Chrome hide marker */
+        
+        /* Custom Accordion Plus/Minus */
+        summary::after { 
+            content: "+"; 
+            font-size: 1.5rem; 
+            color: var(--kic-teal); 
+            font-weight: 300;
+            line-height: 1;
+        }
+        
+        details[open] summary { border-bottom: 1px solid #eee; }
+        details[open] summary::after { content: "−"; } /* Minus sign */
+        
+        .faq-content { 
+            padding: 1.25rem; 
+            color: var(--text-light); 
+            line-height: 1.7;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: var(--kic-blue);
+            color: var(--white);
+            padding: 4rem 0 2rem;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+        
+        .footer-about {
+            max-width: 600px;
+            margin: 0 auto 2rem auto;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            padding-bottom: 2rem;
+        }
+
+        footer a { color: var(--white); text-decoration: underline; opacity: 0.8; }
+        footer a:hover { opacity: 1; }
+
+        /* --- MOBILE OPTIMIZATION --- */
+        @media (max-width: 600px) {
+            h1 { font-size: 1.8rem; }
+            
+            .header-flex { 
+                flex-direction: column; 
+                gap: 0.75rem; 
+                align-items: flex-start; 
+            }
+            
+            .partner-badge { width: 100%; justify-content: center; }
+            
+            .hero { text-align: left; padding: 2.5rem 0; }
+            
+            .btn { 
+                width: 100%; 
+                text-align: center; 
+                padding: 1rem;
+            } 
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-flex">
+            <a href="#" class="brand-logo">Kick It California</a>
+            
+            <div class="partner-badge">
+                <span>Partnered with</span>
+                <strong>IEHP</strong>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Free Help to Quit Smoking or Vaping</h1>
+            <p><strong>Exclusively for IEHP Members.</strong> Get free, confidential support tailored to your life.</p>
+            
+            <ul class="hero-benefits">
+                <li>Free one-on-one quit coaching</li>
+                <li>Personalized quit plan</li>
+                <li>Help managing cravings</li>
+                <li>Free nicotine patches (if eligible)</li>
+            </ul>
+
+            <!-- Note: Verify final link in spec (Hubspot vs KIC form) -->
+            <a href="https://kicform.org/iehp" class="btn">Start My Free Plan</a>
+            <p class="subtext">Services are 100% no-cost for members.</p>
+        </div>
+    </section>
+
+    <section class="process">
+        <div class="container">
+            <h2>What to Expect</h2>
+            <p class="text-center" style="margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                We don't nag. We help you quit at your own pace with a plan that fits your lifestyle.
+            </p>
+            
+            <div class="step-grid">
+                <div class="step-card">
+                    <span class="step-icon">📞</span>
+                    <span class="step-title">Quick Start</span>
+                    Receive a call from us within 2 business days.
+                </div>
+                <div class="step-card">
+                    <span class="step-icon">🤝</span>
+                    <span class="step-title">Expert Support</span>
+                    Work with a trained, non-judgmental coach for ongoing check-ins.
+                </div>
+                <div class="step-card">
+                    <span class="step-icon">📦</span>
+                    <span class="step-title">Tools & Patches</span>
+                    Get free patches sent to your door (if eligible).
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <div class="container faq-container">
+            <h2>Common Questions</h2>
+            
+            <details>
+                <summary>Is this really free?</summary>
+                <div class="faq-content">
+                    Yes. All services are completely free for IEHP members. There are no hidden costs, co-pays, or fees.
+                </div>
+            </details>
+
+            <details>
+                <summary>Do I have to be ready to quit today?</summary>
+                <div class="faq-content">
+                    No. We meet you where you are. Whether you are ready to stop tomorrow or just thinking about it, we can help you figure out your next steps.
+                </div>
+            </details>
+
+            <details>
+                <summary>Can I quit vaping too?</summary>
+                <div class="faq-content">
+                    Yes. Kick It California helps with both smoking and vaping.
+                </div>
+            </details>
+
+            <details>
+                <summary>Is my information private?</summary>
+                <div class="faq-content">
+                    Yes. Your information is kept strictly confidential and is used only to help you with your quit journey.
+                </div>
+            </details>
+
+            <details>
+                <summary>What products do you offer?</summary>
+                <div class="faq-content">
+                    We may provide free nicotine patches if they are medically appropriate for you. Your coach will discuss this during your call to see if you qualify.
+                </div>
+            </details>
+            
+            <div class="text-center" style="margin-top: 3rem;">
+                <a href="https://kicform.org/iehp" class="btn">I'm Ready to Sign Up</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-about">
+                <h4>About Kick It California</h4>
+                <p style="opacity: 0.9; margin-bottom: 1rem;">Kick It California is a free, evidence-based tobacco cessation program that helps Californians quit smoking or vaping.</p>
+                <a href="https://kickitca.org" target="_blank">Visit Main Website</a>
+            </div>
+            
+            <p style="font-size: 0.8rem; opacity: 0.7;">&copy; 2025 Kick It California. All rights reserved.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.8rem;">
+                <a href="#">Privacy Policy</a> &nbsp;|&nbsp; 
+                <a href="tel:1-800-300-8086" style="text-decoration: none;">1-800-300-8086</a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
