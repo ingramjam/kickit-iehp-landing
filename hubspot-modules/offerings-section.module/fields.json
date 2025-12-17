@@ -58,7 +58,7 @@
         "name": "link_url",
         "label": "Link URL (if applicable)",
         "type": "url",
-        "default": ""
+        "supported_types": ["EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG"]
       },
       {
         "name": "link_text",

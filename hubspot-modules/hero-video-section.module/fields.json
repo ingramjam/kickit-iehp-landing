@@ -5,7 +5,7 @@
     "required": true,
     "locked": false,
     "type": "url",
-    "default": "https://131650.fs1.hubspotusercontent-na2.net/hubfs/131650/phone3.mp4"
+    "supported_types": ["EXTERNAL", "FILE"]
   },
   {
     "name": "headline",
@@ -79,7 +79,7 @@
     "required": true,
     "locked": false,
     "type": "url",
-    "default": "https://kickitca.org/form/intake/self/1?srcCode=IEHP"
+    "supported_types": ["EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG"]
   },
   {
     "name": "disclaimer_text",
