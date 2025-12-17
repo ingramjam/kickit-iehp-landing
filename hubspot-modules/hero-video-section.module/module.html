@@ -1,8 +1,10 @@
 <!-- Hero Section with Video Background -->
 <section class="hero-section">
+    {% if module.video_url %}
     <video class="hero-video" autoplay muted loop playsinline>
-        <source src="{{ module.video_url }}" type="video/mp4">
+        <source src="{{ module.video_url.href }}" type="video/mp4">
     </video>
+    {% endif %}
     <div class="hero-container">
         <h1>{{ module.headline }}{% if module.highlight_text %} <span class="highlight">{{ module.highlight_text }}</span>{% endif %}</h1>
         
@@ -22,7 +24,7 @@
         </ul>
         {% endif %}
 
-        <a href="{{ module.cta_url }}" class="btn">{{ module.cta_text }}</a>
+        <a href="{{ module.cta_url.href }}" class="btn" target="_blank" rel="noopener">{{ module.cta_text }}</a>
         
         {% if module.disclaimer_text %}
         <p class="subtext">{{ module.disclaimer_text }}</p>

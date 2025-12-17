@@ -14,7 +14,7 @@
                 <span class="step-icon">{{ item.icon }}</span>
                 <span class="step-title">{{ item.title }}</span>
                 <p class="step-description">{{ item.description }}</p>
-                <a href="{{ item.link_url }}" target="_blank" class="step-link">{{ item.link_text }} →</a>
+                <a href="{{ item.link_url.href }}" target="_blank" rel="noopener" class="step-link">{{ item.link_text }} →</a>
                 {% else %}
                 <span class="step-icon">{{ item.icon }}</span>
                 <span class="step-title">{{ item.title }}</span>

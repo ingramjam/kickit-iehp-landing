@@ -14,7 +14,7 @@
         
         {% if module.show_cta %}
         <div class="faq-cta-wrapper">
-            <a href="{{ module.cta_url }}" class="btn">{{ module.cta_text }}</a>
+            <a href="{{ module.cta_url.href }}" class="btn" target="_blank" rel="noopener">{{ module.cta_text }}</a>
         </div>
         {% endif %}
     </div>
