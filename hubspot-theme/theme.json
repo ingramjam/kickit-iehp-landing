@@ -6,20 +6,5 @@
     "url": "https://kickitca.org"
   },
   "version": "1.0.0",
-  "screenshot_path": "./images/template-previews/landing-page.png",
-  "enable_domain_stylesheets": false,
-  "responsive_breakpoints": [
-    {
-      "name": "mobile",
-      "mediaQuery": "(max-width: 767px)"
-    },
-    {
-      "name": "tablet",
-      "mediaQuery": "(min-width: 768px) and (max-width: 1023px)"
-    },
-    {
-      "name": "desktop",
-      "mediaQuery": "(min-width: 1024px)"
-    }
-  ]
+  "enable_domain_stylesheets": false
 }

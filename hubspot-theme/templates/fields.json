@@ -1,15 +1,1 @@
-[
-  {
-    "name": "page_meta",
-    "label": "Page Meta Information",
-    "type": "group",
-    "children": [
-      {
-        "name": "html_title",
-        "label": "Page Title",
-        "type": "text",
-        "default": "Free Help to Quit | Kick It California & IEHP"
-      }
-    ]
-  }
-]
+[]
